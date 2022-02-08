@@ -1,0 +1,9 @@
+POST http://127.0.0.1:5000/addcustomer HTTP/1.1
+content-type: application/json
+
+{
+    "cust_id": 1,
+    "cust_name": "Amin",
+    "description": "Salary",
+    "amount": 10000
+}
