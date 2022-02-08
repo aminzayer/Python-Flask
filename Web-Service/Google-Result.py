@@ -3,7 +3,7 @@ import requests
 from fake_useragent import UserAgent
 import urllib
 from flask import Flask
-import json
+from flask import jsonify
 import re
 
 
@@ -42,7 +42,7 @@ def Webservice_index():
 @app.route("/google")
 def google():
     links = google_result()
-    json_format = json.dumps(links)
+    json_format = jsonify({'link':links})
     return json_format
 
 
